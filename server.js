@@ -17,3 +17,6 @@ app.use(productRoutes); // Vérifiez si vous utilisez productRoutes ici
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.get('/ping', (req, res) => {
+    res.send('pong');
+  });
